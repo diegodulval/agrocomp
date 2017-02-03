@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subrelatoriousuarioadm" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="38911654-3685-428e-b192-849b42c7a7bf">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM usuario
+RIGHT JOIN administrador ON administrador.usuario_fk = usuario.id]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="8d7fde46-54a1-4380-b8d1-151722111445"/>
+				<text><![CDATA[Administradores:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle radius="3">
+				<reportElement x="0" y="0" width="555" height="20" backcolor="#01579B" uuid="e21ba2c4-20f6-4452-83ac-af864893566c"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" forecolor="#FFFFFF" uuid="df81ceae-e82c-4827-bee9-bf2a0be18659"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="20" forecolor="#FFFFFF" uuid="469d5e05-e65a-42dd-9cca-1070fea1ed17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="20" forecolor="#FFFFFF" uuid="40843767-0357-4a00-b075-54c03c12f020"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[EMAIL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<rectangle radius="3">
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="20" backcolor="#BFEFFF" uuid="4ca35312-b48b-4fda-9a65-db7c2a4b8cb8">
+					<printWhenExpression><![CDATA[new Boolean(($V{COLUMN_COUNT}.intValue() % 2) == 0)]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement mode="Transparent" x="185" y="0" width="1" height="20" forecolor="#FFFFFF" backcolor="#99CCFF" uuid="028d74dd-e5a4-4a0a-8bc1-c005af0afbf7"/>
+			</line>
+			<line>
+				<reportElement mode="Transparent" x="369" y="0" width="1" height="20" forecolor="#FFFFFF" backcolor="#99CCFF" uuid="388636e6-9d5d-440f-8aef-56d5e544f686"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="185" height="20" uuid="117f1fd9-e993-4ddd-adf3-7dc66e8b600e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="0" width="185" height="20" uuid="49f3e101-838c-46eb-b77b-23f3d69b040d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="0" width="185" height="20" uuid="3ffc9d72-4198-420f-b30b-0e3c61754d15"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

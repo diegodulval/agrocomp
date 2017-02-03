@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subrelatoriousuariocli" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9ac38e41-9aab-4613-aee6-24ecaf447b31">
+	<property name="ireport.zoom" value="1.1000000000000003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM usuario
+LEFT JOIN administrador on administrador.usuario_fk = usuario.id
+where administrador.usuario_fk is null]]>
+	</queryString>
+	<field name="id" class="java.lang.Long"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="0f33d7e0-4884-49ff-ac26-d0391994b44c"/>
+				<text><![CDATA[Clientes:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<rectangle radius="3">
+				<reportElement x="0" y="0" width="555" height="20" backcolor="#01579B" uuid="30137abf-4efa-4c87-aaef-ac1bdc551ffc"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" forecolor="#FFFFFF" uuid="802dd063-baaf-4c59-b230-2a515a103077"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="20" forecolor="#FFFFFF" uuid="e370fb60-49a3-4c01-825f-2c94bbb0280d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="20" forecolor="#FFFFFF" uuid="dc992f1f-2695-4c48-b8fd-ba4dddf27956"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[EMAIL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<rectangle radius="3">
+				<reportElement mode="Opaque" x="-1" y="0" width="555" height="20" backcolor="#BFEFFF" uuid="f1d671c1-de15-41ac-af1e-9274f1e75656">
+					<printWhenExpression><![CDATA[new Boolean(($V{COLUMN_COUNT}.intValue() % 2) == 0)]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement mode="Transparent" x="184" y="0" width="1" height="20" forecolor="#FFFFFF" backcolor="#99CCFF" uuid="c10a6a4e-4650-4acd-a663-76158141ef7c"/>
+			</line>
+			<line>
+				<reportElement mode="Transparent" x="368" y="0" width="1" height="20" forecolor="#FFFFFF" backcolor="#99CCFF" uuid="7d2024bc-8b54-493b-9ac1-5c01599ab82e"/>
+			</line>
+			<textField>
+				<reportElement x="-1" y="0" width="185" height="20" uuid="4c47b4ec-3602-4f44-8f10-fc0a9b2c0884"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="20" uuid="3f5727d8-8ff4-40aa-abb0-9fd5537849b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="20" uuid="ddd9a631-0d0a-4f1d-9dc7-26f54fd0122c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

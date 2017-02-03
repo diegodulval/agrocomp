@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/resources/js/npm.js</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/templates/cabecalho.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/resources/js/html5shiv.min.js</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/resources/js/modernizr-2.8.3.min.js</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/classificado/anuncio.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/erro/erro.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/boasVindas.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/src/java/com/agrocomp/controller/IndexCtrl.java</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/forum/discussao.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/src/java/com/agrocomp/controller/administrador/AdministradorCtrl.java</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/resources/css/normalize.css</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/perfil/home.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/resources/js/appAgrocomp.js</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/templates/cabecalho_logout.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/src/java/com/agrocomp/controller/anuncio/AnuncioCtrl.java</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/resources/css/main.css</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/src/java/com/agrocomp/controller/forum/ForumCtrl.java</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/src/java/com/agrocomp/controller/cadastro/CadastroCtrl.java</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/src/java/com/agrocomp/controller/perfil/PerfilCtrl.java</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/classificado/produtos.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/templates/cabecalho_relatorios.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/src/java/com/agrocomp/interceptor/AAInterceptor.java</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/classificado/anuncioTeste.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/forum/forum.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/src/java/com/agrocomp/controller/relatorio/anuncio/AnuncioCtrlRelatorio.java</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/resources/css/materialize.css</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/administrador/sobre/sobre.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/WEB-INF/views/perfil/anuncioForm.jsp</file>
+            <file>file:/E:/AgroComp%203.0/AgroCompWeb/web/resources/css/icon.css</file>
+        </group>
+    </open-files>
+</project-private>

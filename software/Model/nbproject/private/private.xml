@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/service/ClienteService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/criteria/UsuarioCriteria.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/service/DiscussaoService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/dao/ClienteDAO.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/service/MensagemAnuncioService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/service/AnuncioService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/base/service/BaseMensagemAnuncioService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/service/UsuarioService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/entity/Usuario.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/service/HashService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/base/service/BaseMensagemService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/service/ReporteService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/Main.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/dao/ReporteDAO.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/service/NoticiaService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/dao/AnuncioDAO.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/dao/MensagemDAO.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/dao/CategoriaDAO.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/base/service/BaseCategoriaService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/dao/NoticiaDAO.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/dao/UsuarioDAO.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/dao/DiscussaoDAO.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/criteria/MensagemCriteria.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/entity/MensagemAnuncio.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/ConnectionManager.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/base/service/BaseNoticiaService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/base/service/BaseAdministradorService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/criteria/CategoriaCriteria.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/base/service/BaseClienteService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/service/AdministradorService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/service/MensagemService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/criteria/DiscussaoCriteria.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/base/service/BaseReporteService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/base/service/BaseAnuncioService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/dao/MensagemAnuncioDAO.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/criteria/AnuncioCriteria.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/service/CategoriaService.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/entity/Mensagem.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/entity/Discussao.java</file>
+            <file>file:/E:/AgroComp%203.0/Model/src/com/agrocomp/model/base/service/BaseDiscussaoService.java</file>
+        </group>
+    </open-files>
+</project-private>
