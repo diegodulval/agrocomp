@@ -32,7 +32,7 @@
         <!-- For iPhone -->
         <meta name="msapplication-TileColor" content="#00bcd4">
         <meta name="msapplication-TileImage" href="<c:url value="/resources/img/apple-touch-icon.png"/>">
-        
+
         <script>
             $('.btnExcluir').click(function () {
                 var aux = $(this).attr("aux");

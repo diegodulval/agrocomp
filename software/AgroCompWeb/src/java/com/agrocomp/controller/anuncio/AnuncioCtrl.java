@@ -30,7 +30,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class AnuncioCtrl {
 
     @RequestMapping(value = "/classificados", method = RequestMethod.GET)
-    public ModelAndView getClassificados(String nome, Long limit, Long offset, BigDecimal maior, BigDecimal menor, String categoria,Long id) throws Exception {
+    public ModelAndView getClassificados(String nome, Long limit, Long offset, BigDecimal maior, BigDecimal menor, String categoria, Long id) throws Exception {
         ModelAndView mv;
         if (limit != null && offset != null) {
             Map<Long, Object> criteria = new HashMap<>();
@@ -44,7 +44,7 @@ public class AnuncioCtrl {
             if (menor != null) {
                 criteria.put(AnuncioCriteria.MENOR, menor);
             }
-            if (categoria != null && id!=null & id>0) {
+            if (categoria != null && id != null & id > 0) {
                 criteria.put(AnuncioCriteria.CATEGORIA_EQ, id);
             }
             AnuncioService as = new AnuncioService();
@@ -61,7 +61,7 @@ public class AnuncioCtrl {
 
         } else {
             String url = "redirect:/classificados?limit=12&offset=0";
-            
+
             if (nome != null && !nome.isEmpty()) {
                 url += "&nome=" + nome;
             }
@@ -72,10 +72,9 @@ public class AnuncioCtrl {
             if (menor != null && menor.doubleValue() >= 0) {
                 url += "&maior=" + maior;
             }
-            
-            
-            if (categoria != null && !categoria.isEmpty() && id!=null && id>0) {
-                url += "&categoria=" + categoria+"&id="+id;
+
+            if (categoria != null && !categoria.isEmpty() && id != null && id > 0) {
+                url += "&categoria=" + categoria + "&id=" + id;
             }
             mv = new ModelAndView(url);
         }
@@ -85,8 +84,8 @@ public class AnuncioCtrl {
 
     @RequestMapping(value = "/meuperfil/anuncios/novo", method = RequestMethod.POST)
     public ModelAndView postAnunciosNovo(HttpSession session, String nome, Integer qtd, BigDecimal preco, String descricao, Long id_categoria, MultipartFile foto) throws Exception {
-        Cliente cliente =  (Cliente) session.getAttribute("usuarioLogin");
-        ModelAndView mv  = new ModelAndView("perfil/anuncioForm");
+        Cliente cliente = (Cliente) session.getAttribute("usuarioLogin");
+        ModelAndView mv = new ModelAndView("perfil/anuncioForm");
         Anuncio a = new Anuncio();
         a.setNome(nome);
         a.setQtd(qtd);
@@ -130,7 +129,7 @@ public class AnuncioCtrl {
     public ModelAndView getAnunciosNovo(HttpSession session) throws Exception {
         Map<Long, Object> criteria = new HashMap<>();
         CategoriaService cs = new CategoriaService();
-        List<Categoria> categoriaList =  cs.readByCriteria(criteria, 0L, 0L);
+        List<Categoria> categoriaList = cs.readByCriteria(criteria, 0L, 0L);
         ModelAndView mv = new ModelAndView("perfil/anuncioForm");
         mv.addObject("tipoOperacao", "Criar");
         mv.addObject("categoriaList", categoriaList);
@@ -246,12 +245,12 @@ public class AnuncioCtrl {
         anuncio.setId(id);
         reporte.setAnuncio(anuncio);
         reporte.setDataHora(new Timestamp(System.currentTimeMillis()));
-        if(descricao!= null || descricao.trim().isEmpty()){
+        if (descricao != null || descricao.trim().isEmpty()) {
             reporte.setDescricao(descricao);
-        }else{
+        } else {
             reporte.setDescricao("Sem descricao");
         }
-        
+
         rs.create(reporte);
         return mv;
     }

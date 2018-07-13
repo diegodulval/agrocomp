@@ -4,7 +4,7 @@
         <div class="nav-wrapper light-blue darken-4">
             <div class="container">
                 <div class="row">
-                   <a href="<c:url value="/home"/>" class="brand-logo">
+                    <a href="<c:url value="/home"/>" class="brand-logo">
                         <img src="<c:url value="/resources/img/Logo_AgroComp.png"/>"/> 
                     </a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>

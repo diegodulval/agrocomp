@@ -58,19 +58,18 @@ public class PerfilCtrl {
         ModelAndView mv = new ModelAndView("redirect:/home");
         return mv;
     }
-    
+
     @RequestMapping(value = "/novasenha", method = RequestMethod.POST)
-    public ModelAndView postPerfilAlterarSenha(HttpSession session,String senha,String senha2) throws Exception {
+    public ModelAndView postPerfilAlterarSenha(HttpSession session, String senha, String senha2) throws Exception {
         ModelAndView mv = new ModelAndView("redirect:/home");
-        Cliente cliente= (Cliente) session.getAttribute("usuarioLogin");
-        ClienteService cs= new ClienteService();
-        if(senha.equals(senha2)){
+        Cliente cliente = (Cliente) session.getAttribute("usuarioLogin");
+        ClienteService cs = new ClienteService();
+        if (senha.equals(senha2)) {
             cliente.setSenha(senha);
             cs.updateUser(cliente);
         }
         return mv;
     }
-    
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public ModelAndView logout(HttpSession session) throws Exception {

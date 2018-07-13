@@ -22,7 +22,7 @@
           <script src="<c:url value="/resources/js/html5shiv.min.js"/>"></script>
           <script src="<c:url value="/resources/js/respond.min.js"/>"></script>
         <![endif]-->
-       <!-- Favicons-->
+        <!-- Favicons-->
         <link rel="icon" href="<c:url value="/resources/img/apple-touch-icon.png"/>" sizes="32x32">
         <!-- Favicons-->
         <link rel="apple-touch-icon-precomposed" href="<c:url value="/resources/img/apple-touch-icon.png"/>">

@@ -36,15 +36,15 @@
         <c:if test="${empty usuarioLogin}">
             <c:import url="/WEB-INF/views/templates/cabecalho.jsp"></c:import>
         </c:if>
-            <div class="section white">
-                <div class="container">
-                    <div class="row">
+        <div class="section white">
+            <div class="container">
+                <div class="row">
 
-                        <div class="col m5 s12">                        
-                            <form method="post">
-                                <div class="form-group">
-                                    <label for="nome">Nome da categoria:</label>
-                                    <input type="text" class="form-control" id="nome" name="nome" value="${categoria.nome}">
+                    <div class="col m5 s12">                        
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="nome">Nome da categoria:</label>
+                                <input type="text" class="form-control" id="nome" name="nome" value="${categoria.nome}">
                             </div>
                             <button type="submit" class="btn large btn-default">Criar</button>
                         </form>                         

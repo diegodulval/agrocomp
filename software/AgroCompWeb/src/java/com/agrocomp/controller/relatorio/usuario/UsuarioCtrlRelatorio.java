@@ -2,14 +2,12 @@ package com.agrocomp.controller.relatorio.usuario;
 
 import com.agrocomp.model.ConnectionManager;
 import com.agrocomp.model.entity.Administrador;
-import com.agrocomp.model.entity.Cliente;
 import com.agrocomp.model.entity.Usuario;
 import java.io.InputStream;
 import java.net.URL;
 import java.sql.Connection;
 import java.util.HashMap;
 import java.util.Map;
-import static javax.servlet.SessionTrackingMode.URL;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import net.sf.jasperreports.engine.JasperExportManager;
@@ -18,7 +16,6 @@ import net.sf.jasperreports.engine.JasperPrint;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UsuarioCtrlRelatorio {
@@ -34,7 +31,7 @@ public class UsuarioCtrlRelatorio {
 
         URL web = getClass().getResource("/com/agrocomp/controller/relatorio/usuario/");
         parameters.put("SUBREPORT_DIR", web.toString());
-        
+
         parameters.put("LOGO", UsuarioCtrlRelatorio.class.getResource("/com/agrocomp/img/LogoAgroComp.png"));
 
         //Criando o relatório.

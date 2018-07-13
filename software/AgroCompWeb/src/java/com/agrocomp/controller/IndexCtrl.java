@@ -48,7 +48,6 @@ public class IndexCtrl {
                 } else {
                     mv = new ModelAndView("redirect:/meuperfil");
                 }
-
             }
         } else {
             String url = "redirect:/home?limit=4&offset=0";

@@ -29,7 +29,7 @@
         <!-- For iPhone -->
         <meta name="msapplication-TileColor" content="#00bcd4">
         <meta name="msapplication-TileImage" href="<c:url value="/resources/img/apple-touch-icon.png"/>">
-        
+
     </head>
     <body>
         <c:if test="${not empty  usuarioLogin}">

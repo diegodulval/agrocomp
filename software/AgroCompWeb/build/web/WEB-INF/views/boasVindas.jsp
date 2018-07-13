@@ -28,7 +28,7 @@
         <!-- For iPhone -->
         <meta name="msapplication-TileColor" content="#00bcd4">
         <meta name="msapplication-TileImage" href="<c:url value="/resources/img/apple-touch-icon.png"/>">
-        
+
 
     </head>
     <body>
@@ -53,12 +53,12 @@
                                         <ul class="tabs">
                                             <li class="tab col s3"><a <c:if test="${empty errors}">class="active"</c:if> href="#Login">Entrar</a></li>
                                             <li class="tab col s3"><a <c:if test="${not empty errors}">class="active"</c:if>href="#Cadastro">Cadastrar-se</a></li>
-                                        </ul>
-                                    </div>
-                                    <div id="Login" class="col s12">
-                                        <div class="card-content white-text">
-                                            <span class="card-title center ">Acesse o Seu Perfil</span>
-                                            <form method="post" action="<%=request.getContextPath()%>/login">
+                                            </ul>
+                                        </div>
+                                        <div id="Login" class="col s12">
+                                            <div class="card-content white-text">
+                                                <span class="card-title center ">Acesse o Seu Perfil</span>
+                                                <form method="post" action="<%=request.getContextPath()%>/login">
                                                 <div class="row">
                                                     <div class="input-field col s12">
                                                         <i class="material-icons prefix iconAcesso">account_circle</i>
@@ -141,7 +141,7 @@
                             </c:if>
                         </div>
                         <h5><a href="<c:url value="/classificados?categoria=${categoria.nome}&id=${categoria.id}"/>">${categoria.nome}</a></h5>
-                                                       
+
                     </div>
                 </c:forEach>
             </div>

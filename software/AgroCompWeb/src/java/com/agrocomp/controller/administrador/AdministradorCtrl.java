@@ -170,8 +170,7 @@ public class AdministradorCtrl {
         return mv;
 
     }
-    
-    
+
     @RequestMapping(value = "/noticias/{id}/deletar", method = RequestMethod.GET)
     public ModelAndView getNoticiaDeletar(HttpSession session, @PathVariable Long id) throws Exception {
         ModelAndView mv = new ModelAndView("redirect:/administrador/noticias");

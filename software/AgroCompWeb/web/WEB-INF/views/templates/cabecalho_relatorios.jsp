@@ -1,12 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<header>s
+<header>
     <ul id="relatoriomain" class="dropdown-content">
         <li><a href="<c:url value="/usuario/pdf"/>" target="_blank">Clientes</a></li>
         <li class="divider"></li>
         <li><a href="<c:url value="/anuncio/pdf"/>" target="_blank">Anúncios</a></li>
         <li class="divider"></li>
         <li><a href="<c:url value="/reporte/pdf"/>" target="_blank">Reportes</a></li>
-
     </ul>
     <nav>
         <div class="nav-wrapper light-blue darken-4">

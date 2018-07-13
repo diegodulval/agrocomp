@@ -1,9 +1,7 @@
 package com.agrocomp.controller.relatorio.anuncio;
 
-import com.agrocomp.controller.relatorio.usuario.*;
 import com.agrocomp.model.ConnectionManager;
 import com.agrocomp.model.entity.Administrador;
-import com.agrocomp.model.entity.Cliente;
 import com.agrocomp.model.entity.Usuario;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -17,7 +15,6 @@ import net.sf.jasperreports.engine.JasperPrint;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AnuncioCtrlRelatorio {

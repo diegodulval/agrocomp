@@ -122,13 +122,13 @@
                                         <p class="collections-content">${discussao.pergunta} </p>
                                     </div> 
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col s6 l6">
                                         <a class="waves-effect waves-light" href="<c:url value="/forum/discussao/${discussao.id}"/>"><i class="material-icons left">forum</i>Responder</a>
                                     </div>
                                     <div class="col s6 l6">
-                                         <a class="waves-effect waves-light" href="<c:url value="/forum/discussao/${discussao.id}"/>"><i class="material-icons left">textsms</i>Nº de respostas: ${discussao.numMensagem}</a>
+                                        <a class="waves-effect waves-light" href="<c:url value="/forum/discussao/${discussao.id}"/>"><i class="material-icons left">textsms</i>Nº de respostas: ${discussao.numMensagem}</a>
                                     </div>
                                 </div>
                             </li>

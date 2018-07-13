@@ -2,13 +2,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"
         isErrorPage="true"%> 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+    "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-      <!-- Favicons-->
+        <title>ERRO 404</title>
+        <!-- Favicons-->
         <link rel="icon" href="<c:url value="/resources/img/apple-touch-icon.png"/>" sizes="32x32">
         <!-- Favicons-->
         <link rel="apple-touch-icon-precomposed" href="<c:url value="/resources/img/apple-touch-icon.png"/>">
@@ -20,9 +20,9 @@
         <div class="container">
             <div class="row">
                 <div class="col m12 l12 s12 center">
-                     <img src="<c:url value="/resources/erro/erro404.jpg"/>">
+                    <img src="<c:url value="/resources/erro/erro404.jpg"/>">
                 </div>
             </div>
-            </div>
+        </div>
     </body>
 </html>

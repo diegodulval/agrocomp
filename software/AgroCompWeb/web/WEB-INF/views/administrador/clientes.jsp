@@ -37,15 +37,15 @@
         <c:if test="${empty usuarioLogin}">
             <c:import url="/WEB-INF/views/templates/cabecalho.jsp"></c:import>
         </c:if>
-            <div class="container">
-                <h1 class="center">Clientes do sistema</h1>
-                <table class="striped">
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Excluir </th>
-                    </tr>
+        <div class="container">
+            <h1 class="center">Clientes do sistema</h1>
+            <table class="striped">
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Excluir </th>
+                </tr>
                 <c:forEach items="${clienteList}" var="cliente">
                     <tr>
                         <td>${cliente.id}</td>

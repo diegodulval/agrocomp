@@ -38,32 +38,32 @@
         </c:if>
         <div class="section white">
             <div class="container">
-                
 
-                    <div class="col m5 s12">                        
-                        <form method="post" class="col s12">
-                            <div class="form-group">
-                                <label for="titulo">Título da notícia:</label>
-                                <input type="text" class="form-control" id="nome" name="titulo" value="${noticia.titulo}">
+
+                <div class="col m5 s12">                        
+                    <form method="post" class="col s12">
+                        <div class="form-group">
+                            <label for="titulo">Título da notícia:</label>
+                            <input type="text" class="form-control" id="nome" name="titulo" value="${noticia.titulo}">
+                        </div>
+                        <div class="form-group">
+                            <label for="link">Link da notícia:</label>
+                            <input type="text" class="form-control" id="nome" name="link" value="${noticia.link}">
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="descricao" class="materialize-textarea" name="descricao" >${noticia.descricao}</textarea>
+                                <label for="descricao">Descrição da notícia: </label>
                             </div>
-                            <div class="form-group">
-                                <label for="link">Link da notícia:</label>
-                                <input type="text" class="form-control" id="nome" name="link" value="${noticia.link}">
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="descricao" class="materialize-textarea" name="descricao" >${noticia.descricao}</textarea>
-                                    <label for="descricao">Descrição da notícia: </label>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn large btn-default">${operacao}</button>
-                        </form>                         
-                    </div>
+                        </div>
+                        <button type="submit" class="btn large btn-default">${operacao}</button>
+                    </form>                         
                 </div>
             </div>
-            <c:import url="/WEB-INF/views/templates/rodape.jsp"></c:import>
-            <script src="<c:url value="/resources/js/jquery.min.js"/>"></script>
-            <script src="<c:url value="/resources/js/materialize.min.js"/>"></script>
-            <script src="<c:url value="/resources/js/appAgrocomp.js"/>"></script>
+        </div>
+        <c:import url="/WEB-INF/views/templates/rodape.jsp"></c:import>
+        <script src="<c:url value="/resources/js/jquery.min.js"/>"></script>
+        <script src="<c:url value="/resources/js/materialize.min.js"/>"></script>
+        <script src="<c:url value="/resources/js/appAgrocomp.js"/>"></script>
     </body>
 </html>

@@ -38,9 +38,9 @@
         <c:if test="${empty usuarioLogin}">
             <c:import url="/WEB-INF/views/templates/cabecalho.jsp"></c:import>
         </c:if>
-            <div class="container">
-                <h1 class="center">Noticias </h1>
-                <a href="<c:url value="/administrador/noticias/novo"/>" class="btn blue">Nova</a>
+        <div class="container">
+            <h1 class="center">Noticias </h1>
+            <a href="<c:url value="/administrador/noticias/novo"/>" class="btn blue">Nova</a>
             <table class="striped">
                 <tr>
                     <th>ID</th>
