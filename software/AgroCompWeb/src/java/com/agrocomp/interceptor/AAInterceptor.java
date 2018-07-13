@@ -1,4 +1,3 @@
-
 package com.agrocomp.interceptor;
 
 import com.agrocomp.model.entity.Cliente;
@@ -6,7 +5,6 @@ import com.agrocomp.model.entity.Usuario;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-
 
 public class AAInterceptor extends HandlerInterceptorAdapter {
 
@@ -36,20 +34,20 @@ public class AAInterceptor extends HandlerInterceptorAdapter {
         if (uri.equals(context + "/sobre")) {
             shallPass = true;
         }
-         if (uri.equals(context + "/forum")) {
+        if (uri.equals(context + "/forum")) {
             shallPass = true;
         }
-          if (uri.startsWith(context + "/forum/discussao")) {
+        if (uri.startsWith(context + "/forum/discussao")) {
             shallPass = true;
         }
-        if(uri.startsWith(context+"/classificados/anuncio/")){
-            shallPass= true;
+        if (uri.startsWith(context + "/classificados/anuncio/")) {
+            shallPass = true;
         }
-        if(uri.startsWith(context+"/reporte/anuncio/")){
-            shallPass= true;
+        if (uri.startsWith(context + "/reporte/anuncio/")) {
+            shallPass = true;
         }
-        if(uri.startsWith(context+"/anuncio/") && uri.endsWith("/img.jpg")){
-            shallPass= true;
+        if (uri.startsWith(context + "/anuncio/") && uri.endsWith("/img.jpg")) {
+            shallPass = true;
         }
 
         Usuario usuario = (Usuario) request.getSession().getAttribute("usuarioLogin");
@@ -66,14 +64,14 @@ public class AAInterceptor extends HandlerInterceptorAdapter {
                 if (uri.startsWith(context + "/administrador/clientes")) {
                     shallPass = false;
                 }
-                if (uri.startsWith(context + "/reportes/")&& uri.endsWith("/deletar")) {
+                if (uri.startsWith(context + "/reportes/") && uri.endsWith("/deletar")) {
                     shallPass = false;
                 }
                 if (uri.startsWith(context + "/categorias/") && uri.endsWith("/deletar")) {
                     shallPass = false;
                 }
 
-                if (uri.startsWith(context + "/categorias/")&& uri.endsWith("/editar")) {
+                if (uri.startsWith(context + "/categorias/") && uri.endsWith("/editar")) {
                     shallPass = false;
                 }
 
