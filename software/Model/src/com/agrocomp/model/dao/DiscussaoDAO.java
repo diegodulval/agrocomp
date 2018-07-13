@@ -55,11 +55,11 @@ public class DiscussaoDAO implements BaseDAO<Discussao> {
 
     @Override
     public List<Discussao> readByCriteria(Connection conn, Map<Long, Object> criteria, Long limit, Long offset) throws Exception {
-        String sql="SELECT  id,titulo, pergunta, datahora, cliente_fk FROM discussao where 1=1 ";
+        String sql = "SELECT  id,titulo, pergunta, datahora, cliente_fk FROM discussao where 1=1 ";
         Statement s = conn.createStatement();
         sql += applyCriteria(criteria);
-        
-         if (limit != null && limit > 0) {
+
+        if (limit != null && limit > 0) {
             sql += " limit " + limit;
         }
         if (offset != null && offset >= 0) {
@@ -86,7 +86,7 @@ public class DiscussaoDAO implements BaseDAO<Discussao> {
 
     @Override
     public Long countByCriteria(Connection conn, Map<Long, Object> criteria) throws Exception {
-         String sql = "SELECT count(*) count FROM discussao WHERE 1=1 ";
+        String sql = "SELECT count(*) count FROM discussao WHERE 1=1 ";
         sql += applyCriteria(criteria);
         Statement s = conn.createStatement();
         ResultSet rs = s.executeQuery(sql);
@@ -101,7 +101,7 @@ public class DiscussaoDAO implements BaseDAO<Discussao> {
 
     @Override
     public void update(Connection conn, Discussao entity) throws Exception {
-        String sql="UPDATE discussao SET  titulo=?, pergunta=? WHERE id=?;";
+        String sql = "UPDATE discussao SET  titulo=?, pergunta=? WHERE id=?;";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1, entity.getTitulo());
         ps.setString(2, entity.getPergunta());
@@ -112,7 +112,7 @@ public class DiscussaoDAO implements BaseDAO<Discussao> {
 
     @Override
     public void delete(Connection conn, Long id) throws Exception {
-        String sql="DELETE FROM discussao WHERE id=?;";
+        String sql = "DELETE FROM discussao WHERE id=?;";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setLong(1, id);
         ps.execute();
@@ -121,19 +121,19 @@ public class DiscussaoDAO implements BaseDAO<Discussao> {
 
     @Override
     public String applyCriteria(Map<Long, Object> criteria) {
-        String sql="";
-        
+        String sql = "";
+
         Long cliente_fk = (Long) criteria.get(DiscussaoCriteria.CLIENTE_FK);
-        if(cliente_fk!= null && cliente_fk >0){
-            sql=" and cliente_fk="+cliente_fk;
+        if (cliente_fk != null && cliente_fk > 0) {
+            sql = " and cliente_fk=" + cliente_fk;
         }
-        
-         String discussaoILike=(String) criteria.get(DiscussaoCriteria.DISCUSSAO_ILIKE);
-        if(discussaoILike != null && !discussaoILike.trim().isEmpty()){
-             sql += " AND titulo ILIKE '%" + discussaoILike + "%'";
+
+        String discussaoILike = (String) criteria.get(DiscussaoCriteria.DISCUSSAO_ILIKE);
+        if (discussaoILike != null && !discussaoILike.trim().isEmpty()) {
+            sql += " AND titulo ILIKE '%" + discussaoILike + "%'";
         }
-         sql += " order by datahora desc";
-        
+        sql += " order by datahora desc";
+
         return sql;
     }
 

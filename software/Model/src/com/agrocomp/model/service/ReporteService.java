@@ -1,4 +1,3 @@
-
 package com.agrocomp.model.service;
 
 import com.agrocomp.model.ConnectionManager;
@@ -9,8 +8,7 @@ import java.sql.Connection;
 import java.util.List;
 import java.util.Map;
 
-
-public class ReporteService implements BaseReporteService<Reporte>{
+public class ReporteService implements BaseReporteService<Reporte> {
 
     @Override
     public void create(Reporte entity) throws Exception {
@@ -64,6 +62,4 @@ public class ReporteService implements BaseReporteService<Reporte>{
         }
     }
 
-   
-    
 }

@@ -35,10 +35,9 @@ public class AnuncioDAO implements BaseDAO<Anuncio> {
             cat.setId(rs.getLong("id_categoria"));
             cat.setNome(rs.getString("categoria"));
             a.setCategoria(cat);
-            Cliente cliente= new Cliente();
+            Cliente cliente = new Cliente();
             cliente.setId(rs.getLong("cliente_fk"));
             a.setCliente(cliente);
-            
 
         }
         rs.close();
@@ -51,8 +50,8 @@ public class AnuncioDAO implements BaseDAO<Anuncio> {
         String sql = "select anuncio.nome anuncio, anuncio.id id_anuncio, anuncio.preco,anuncio.qtde,anuncio.descricao,anuncio.foto,categoria.id id_categoria, categoria.nome categoria from anuncio left join categoria on categoria.id= anuncio.categoria_fk   where 1=1 ";
         Statement s = conn.createStatement();
         sql += applyCriteria(criteria);
-        
-         if (limit != null && limit > 0) {
+
+        if (limit != null && limit > 0) {
             sql += " limit " + limit;
         }
         if (offset != null && offset >= 0) {
@@ -81,7 +80,7 @@ public class AnuncioDAO implements BaseDAO<Anuncio> {
 
     @Override
     public Long countByCriteria(Connection conn, Map<Long, Object> criteria) throws Exception {
-       String sql = "SELECT count(*) count FROM anuncio WHERE 1=1 ";
+        String sql = "SELECT count(*) count FROM anuncio WHERE 1=1 ";
         sql += applyCriteria(criteria);
         Statement s = conn.createStatement();
         ResultSet rs = s.executeQuery(sql);
@@ -100,31 +99,31 @@ public class AnuncioDAO implements BaseDAO<Anuncio> {
 
         String nomeEQ = (String) criteria.get(AnuncioCriteria.NOME_EQ);
         if (nomeEQ != null && !nomeEQ.isEmpty()) {
-            sql+= " and anuncio.nome='" + nomeEQ + "'";
+            sql += " and anuncio.nome='" + nomeEQ + "'";
         }
 
         Long id = (Long) criteria.get(AnuncioCriteria.CLIENTE_FK);
         if (id != null && id > 0) {
             sql = " and anuncio.cliente_fk=" + id + "";
         }
-        
-        BigDecimal maior= (BigDecimal)criteria.get(AnuncioCriteria.MAIOR);
-        if(maior!= null){
-            sql+=" and anuncio.preco<"+maior;
+
+        BigDecimal maior = (BigDecimal) criteria.get(AnuncioCriteria.MAIOR);
+        if (maior != null) {
+            sql += " and anuncio.preco<" + maior;
         }
-        BigDecimal menor= (BigDecimal)criteria.get(AnuncioCriteria.MENOR);
-        if(menor!= null){
-            sql+=" and anuncio.preco>"+menor;
+        BigDecimal menor = (BigDecimal) criteria.get(AnuncioCriteria.MENOR);
+        if (menor != null) {
+            sql += " and anuncio.preco>" + menor;
         }
-        
-        Long categoria= (Long) criteria.get(AnuncioCriteria.CATEGORIA_EQ);
-        if(categoria != null && categoria >0){
-            sql+=" and categoria.id='"+categoria+"'";
+
+        Long categoria = (Long) criteria.get(AnuncioCriteria.CATEGORIA_EQ);
+        if (categoria != null && categoria > 0) {
+            sql += " and categoria.id='" + categoria + "'";
         }
-        
-        String nomeIlike=(String) criteria.get(AnuncioCriteria.NOME_ILIKE);
-        if(nomeIlike != null && !nomeIlike.trim().isEmpty()){
-             sql += " AND anuncio.nome ILIKE '%" + nomeIlike + "%'";
+
+        String nomeIlike = (String) criteria.get(AnuncioCriteria.NOME_ILIKE);
+        if (nomeIlike != null && !nomeIlike.trim().isEmpty()) {
+            sql += " AND anuncio.nome ILIKE '%" + nomeIlike + "%'";
         }
 
         return sql;
@@ -160,7 +159,7 @@ public class AnuncioDAO implements BaseDAO<Anuncio> {
     public void update(Connection conn, Anuncio entity) throws Exception {
         String sql = "UPDATE public.anuncio SET categoria_fk=?, nome=?,  qtde=?, preco=?, descricao=?, foto=? WHERE anuncio.id=?";
         PreparedStatement ps = conn.prepareStatement(sql);
-        int i=0;
+        int i = 0;
         ps.setLong(++i, entity.getCategoria().getId());
         ps.setString(++i, entity.getNome());
         ps.setInt(++i, entity.getQtd());

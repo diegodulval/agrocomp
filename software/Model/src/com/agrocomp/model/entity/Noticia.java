@@ -3,8 +3,8 @@ package com.agrocomp.model.entity;
 import com.agrocomp.model.base.BaseEntity;
 import java.sql.Timestamp;
 
+public class Noticia extends BaseEntity {
 
-public class Noticia  extends BaseEntity{
     private Administrador adm;
     private Timestamp dataHora;
     private String titulo;
@@ -50,5 +50,5 @@ public class Noticia  extends BaseEntity{
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    
+
 }

@@ -10,10 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- *
- * @author diego.freitas
- */
 public class UsuarioService implements BaseUsuarioService {
 
     @Override
@@ -36,5 +32,5 @@ public class UsuarioService implements BaseUsuarioService {
         conn.close();
         return usuario;
     }
-   
+
 }

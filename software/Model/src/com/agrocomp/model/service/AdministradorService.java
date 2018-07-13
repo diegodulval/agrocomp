@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.agrocomp.model.service;
 
 import com.agrocomp.model.ConnectionManager;
@@ -13,10 +8,6 @@ import java.sql.Connection;
 import java.util.List;
 import java.util.Map;
 
-/**
- *
- * @author couto
- */
 public class AdministradorService implements BaseAdministradorService {
 
     @Override
@@ -63,5 +54,5 @@ public class AdministradorService implements BaseAdministradorService {
     public Map<String, String> validate(Map<String, Object> filds) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

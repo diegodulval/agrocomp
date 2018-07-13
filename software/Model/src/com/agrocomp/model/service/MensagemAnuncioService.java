@@ -46,7 +46,7 @@ public class MensagemAnuncioService implements BaseMensagemAnuncioService {
         }
         return mensagemAnuncioList;
     }
-   
+
     public List<MensagemAnuncio> readByIdAnuncio(Long idAnuncio) throws Exception {
         Connection conn = ConnectionManager.getInstance().getConnection();
         List<MensagemAnuncio> mensagemAnuncioList = new ArrayList<>();

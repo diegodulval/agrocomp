@@ -3,7 +3,8 @@ package com.agrocomp.model.entity;
 import com.agrocomp.model.base.BaseEntity;
 import java.sql.Timestamp;
 
-public class MensagemAnuncio extends BaseEntity{
+public class MensagemAnuncio extends BaseEntity {
+
     Anuncio anuncio;
     Usuario usuario;
     String mensagem;
@@ -16,6 +17,7 @@ public class MensagemAnuncio extends BaseEntity{
     public void setDataHora(Timestamp dataHora) {
         this.dataHora = dataHora;
     }
+
     public Anuncio getAnuncio() {
         return anuncio;
     }
@@ -39,5 +41,5 @@ public class MensagemAnuncio extends BaseEntity{
     public void setMensagem(String mensagem) {
         this.mensagem = mensagem;
     }
-    
+
 }

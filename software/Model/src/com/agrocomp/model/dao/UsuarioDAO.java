@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.agrocomp.model.dao;
 
 import com.agrocomp.model.base.BaseDAO;
@@ -19,10 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- *
- * @author Alunos
- */
 public class UsuarioDAO implements BaseDAO<Usuario> {
 
     @Override
@@ -125,7 +116,7 @@ public class UsuarioDAO implements BaseDAO<Usuario> {
 
     @Override
     public Long countByCriteria(Connection conn, Map<Long, Object> criteria) throws Exception {
-       String sql = "SELECT count(*) count FROM anuncio WHERE 1=1 ";
+        String sql = "SELECT count(*) count FROM anuncio WHERE 1=1 ";
         sql += applyCriteria(criteria);
         Statement s = conn.createStatement();
         ResultSet rs = s.executeQuery(sql);
@@ -142,7 +133,7 @@ public class UsuarioDAO implements BaseDAO<Usuario> {
     public void update(Connection conn, Usuario entity) throws Exception {
         String sql = "UPDATE usuario SET nome=?,senha=? WHERE id=?;";
         PreparedStatement ps = conn.prepareStatement(sql);
-        int i=0;
+        int i = 0;
         ps.setString(++i, entity.getNome());
         ps.setString(++i, entity.getSenha());
         ps.setLong(++i, entity.getId());
@@ -172,10 +163,10 @@ public class UsuarioDAO implements BaseDAO<Usuario> {
         if (senha != null && !senha.isEmpty()) {
             sql += " and senha = '" + senha + "'";
         }
-        
+
         String nome = (String) criteria.get(UsuarioCriteria.NOME_EQ);
-        if(nome!= null && !nome.trim().isEmpty()){
-            sql+=" and nome='"+nome+"'";
+        if (nome != null && !nome.trim().isEmpty()) {
+            sql += " and nome='" + nome + "'";
         }
         return sql;
     }

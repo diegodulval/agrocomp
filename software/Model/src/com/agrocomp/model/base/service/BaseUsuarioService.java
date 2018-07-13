@@ -6,5 +6,4 @@ public interface BaseUsuarioService {
 
     public Usuario login(String email, String senha) throws Exception;
 
-
 }

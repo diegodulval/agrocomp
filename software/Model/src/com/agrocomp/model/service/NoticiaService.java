@@ -1,4 +1,3 @@
-
 package com.agrocomp.model.service;
 
 import com.agrocomp.model.ConnectionManager;
@@ -9,12 +8,11 @@ import java.sql.Connection;
 import java.util.List;
 import java.util.Map;
 
-
 public class NoticiaService implements BaseNoticiaService {
 
     @Override
     public void create(Noticia entity) throws Exception {
-         Connection conn = ConnectionManager.getInstance().getConnection();
+        Connection conn = ConnectionManager.getInstance().getConnection();
         try {
             NoticiaDAO dao = new NoticiaDAO();
             dao.create(conn, entity);
@@ -94,7 +92,7 @@ public class NoticiaService implements BaseNoticiaService {
 
     @Override
     public void delete(Long id) throws Exception {
-         Connection conn = ConnectionManager.getInstance().getConnection();
+        Connection conn = ConnectionManager.getInstance().getConnection();
         try {
             NoticiaDAO dao = new NoticiaDAO();
             dao.delete(conn, id);
@@ -111,5 +109,5 @@ public class NoticiaService implements BaseNoticiaService {
     public Map<String, String> validate(Map<String, Object> filds) throws Exception {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

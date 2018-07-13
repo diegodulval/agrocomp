@@ -1,16 +1,11 @@
-
 package com.agrocomp.model.entity;
 
-
-
 public class Cliente extends Usuario {
-    
+
     private String estado;
     private String cidade;
     private String telefone;
     private String sobre;
-    
-    
 
     public String getEstado() {
         return estado;
@@ -44,6 +39,4 @@ public class Cliente extends Usuario {
         this.sobre = sobre;
     }
 
-  
-    
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.agrocomp.model.dao;
 
 import com.agrocomp.model.base.BaseDAO;
@@ -17,15 +12,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- *
- * @author Alunos
- */
-public class CategoriaDAO implements BaseDAO<Categoria>{
+public class CategoriaDAO implements BaseDAO<Categoria> {
 
     @Override
     public void create(Connection conn, Categoria entity) throws Exception {
-         String sql = "INSERT INTO categoria(nome) VALUES (?) RETURNING id;";
+        String sql = "INSERT INTO categoria(nome) VALUES (?) RETURNING id;";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1, entity.getNome());
         ResultSet rs = ps.executeQuery();
@@ -35,17 +26,16 @@ public class CategoriaDAO implements BaseDAO<Categoria>{
         rs.close();
         ps.close();
     }
-    
 
     @Override
     public Categoria readById(Connection conn, Long id) throws Exception {
-        Categoria cat= null;
-        String sql="SELECT nome FROM categoria where id=?";
+        Categoria cat = null;
+        String sql = "SELECT nome FROM categoria where id=?";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setLong(1, id);
-        ResultSet rs= ps.executeQuery();
-        if(rs.next()){
-            cat= new Categoria();
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            cat = new Categoria();
             cat.setId(id);
             cat.setNome(rs.getString("nome"));
         }
@@ -57,15 +47,15 @@ public class CategoriaDAO implements BaseDAO<Categoria>{
     @Override
     public List<Categoria> readByCriteria(Connection conn, Map<Long, Object> criteria, Long limit, Long offset) throws Exception {
         List<Categoria> categoriaList = new ArrayList<>();
-        String sql="SELECT id,nome FROM categoria where 1=1 order by nome";
-        if(criteria==null){
-            criteria= new HashMap<>();
+        String sql = "SELECT id,nome FROM categoria where 1=1 order by nome";
+        if (criteria == null) {
+            criteria = new HashMap<>();
         }
-        sql+= applyCriteria(criteria);
+        sql += applyCriteria(criteria);
         Statement ps = conn.createStatement();
-        ResultSet rs= ps.executeQuery(sql);
-        while(rs.next()){
-            Categoria cat= new Categoria();
+        ResultSet rs = ps.executeQuery(sql);
+        while (rs.next()) {
+            Categoria cat = new Categoria();
             cat.setId(rs.getLong("id"));
             cat.setNome(rs.getString("nome"));
             categoriaList.add(cat);
@@ -92,7 +82,7 @@ public class CategoriaDAO implements BaseDAO<Categoria>{
 
     @Override
     public void update(Connection conn, Categoria entity) throws Exception {
-        String sql="UPDATE categoria SET nome=? WHERE id=?;";
+        String sql = "UPDATE categoria SET nome=? WHERE id=?;";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1, entity.getNome());
         ps.setLong(2, entity.getId());
@@ -102,7 +92,7 @@ public class CategoriaDAO implements BaseDAO<Categoria>{
 
     @Override
     public void delete(Connection conn, Long id) throws Exception {
-         String sql="DELETE FROM categoria  WHERE id=?;";
+        String sql = "DELETE FROM categoria  WHERE id=?;";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setLong(1, id);
         ps.execute();
@@ -111,13 +101,13 @@ public class CategoriaDAO implements BaseDAO<Categoria>{
 
     @Override
     public String applyCriteria(Map<Long, Object> criteria) {
-        String sql="";
-        
-        String nomeEQ = (String)criteria.get(CategoriaCriteria.NOME_EQ);
-        if(nomeEQ != null && !nomeEQ.isEmpty()){
-            sql=" and nome= '"+nomeEQ+"'";
+        String sql = "";
+
+        String nomeEQ = (String) criteria.get(CategoriaCriteria.NOME_EQ);
+        if (nomeEQ != null && !nomeEQ.isEmpty()) {
+            sql = " and nome= '" + nomeEQ + "'";
         }
         return sql;
     }
-    
+
 }

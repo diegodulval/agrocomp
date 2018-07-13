@@ -11,8 +11,6 @@ import com.agrocomp.model.base.service.BaseAnuncioService;
 
 public class AnuncioService implements BaseAnuncioService {
 
-
-
     @Override
     public void create(Anuncio entity) throws Exception {
         Connection conn = ConnectionManager.getInstance().getConnection();
@@ -127,7 +125,7 @@ public class AnuncioService implements BaseAnuncioService {
         if (a.getPreco() == null || a.getPreco().equals(0.00)) {
             errors.put("preco", "Insira um preço valido");
         }
-        if(a.getCategoria() == null || a.getCategoria().getId()==null || a.getCategoria().getId()<=0){
+        if (a.getCategoria() == null || a.getCategoria().getId() == null || a.getCategoria().getId() <= 0) {
             errors.put("categoria", "Selecione uma categoria");
         }
 

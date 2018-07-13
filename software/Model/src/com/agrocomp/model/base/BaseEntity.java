@@ -2,8 +2,8 @@
 //Todas as entidades terao um id sequencial
 package com.agrocomp.model.base;
 
-
 public abstract class BaseEntity {
+
     private Long id;
 
     public Long getId() {
@@ -13,5 +13,5 @@ public abstract class BaseEntity {
     public void setId(Long id) {
         this.id = id;
     }
-    
+
 }

@@ -1,13 +1,10 @@
-
 package com.agrocomp.model.entity;
 
 import com.agrocomp.model.base.BaseEntity;
 import java.sql.Timestamp;
 
-import javafx.scene.text.Text;
+public class Reporte extends BaseEntity {
 
-
-public class Reporte extends BaseEntity{
     private String descricao;
     private Timestamp dataHora;
     private Anuncio anuncio;
@@ -19,8 +16,6 @@ public class Reporte extends BaseEntity{
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
-    
 
     public Timestamp getDataHora() {
         return dataHora;

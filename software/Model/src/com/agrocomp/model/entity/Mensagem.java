@@ -3,8 +3,8 @@ package com.agrocomp.model.entity;
 import com.agrocomp.model.base.BaseEntity;
 import java.sql.Timestamp;
 
+public class Mensagem extends BaseEntity {
 
-public class Mensagem extends BaseEntity{
     private String mensagem;
     private Timestamp dataHora;
     private Cliente cliente;

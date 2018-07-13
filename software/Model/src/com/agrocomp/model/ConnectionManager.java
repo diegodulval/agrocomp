@@ -16,16 +16,16 @@ public class ConnectionManager {
 
     private ConnectionManager() {
         dataSource = new PGPoolingDataSource();
-        dataSource.setDataSourceName("agrcomp3");
+        dataSource.setDataSourceName("agrocomp");
         dataSource.setServerName("localhost");
         dataSource.setPortNumber(5432);
-        dataSource.setDatabaseName("agrcomp3");
+        dataSource.setDatabaseName("agrocomp");
         dataSource.setUser("postgres");
         dataSource.setPassword("postgres");
         dataSource.setMaxConnections(30);
         dataSource.setInitialConnections(2);
     }
-    
+
     private static ConnectionManager instance;
 
     public static ConnectionManager getInstance() {

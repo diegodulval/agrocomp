@@ -44,7 +44,6 @@ public class ClienteDAO implements BaseClienteDAO<Cliente> {
                 clienteList.add((Cliente) usuario);
             }
 
-            
         }
         rs.close();
         ps.close();

@@ -5,8 +5,8 @@ import java.security.MessageDigest;
 
 public abstract class Usuario extends BaseEntity {
 
-    private static String SALT_PREFIX_SENHA = "mtoloko";
-    private static String SALT_SUFIX_SENHA = "sequela";
+    private static String SALT_PREFIX_SENHA = "a$4oc0mP";
+    private static String SALT_SUFIX_SENHA = "53QquEla";
 
     private String nome;
     private String email;
@@ -35,8 +35,8 @@ public abstract class Usuario extends BaseEntity {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
-     public void setSenhaAsPlainText(String senhaAsPlainText) throws Exception {
+
+    public void setSenhaAsPlainText(String senhaAsPlainText) throws Exception {
         this.senha = encodeSenha(senhaAsPlainText);
     }
 

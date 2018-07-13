@@ -1,4 +1,3 @@
-
 package com.agrocomp.model.service;
 
 import com.agrocomp.model.ConnectionManager;
@@ -10,12 +9,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class DiscussaoService implements BaseDiscussaoService {
 
     @Override
     public void create(Discussao entity) throws Exception {
-         Connection conn = ConnectionManager.getInstance().getConnection();
+        Connection conn = ConnectionManager.getInstance().getConnection();
         try {
             DiscussaoDAO dao = new DiscussaoDAO();
             dao.create(conn, entity);
@@ -80,7 +78,7 @@ public class DiscussaoService implements BaseDiscussaoService {
 
     @Override
     public void update(Discussao entity) throws Exception {
-       Connection conn = ConnectionManager.getInstance().getConnection();
+        Connection conn = ConnectionManager.getInstance().getConnection();
         try {
             DiscussaoDAO dao = new DiscussaoDAO();
             dao.update(conn, entity);
@@ -95,7 +93,7 @@ public class DiscussaoService implements BaseDiscussaoService {
 
     @Override
     public void delete(Long id) throws Exception {
-       Connection conn = ConnectionManager.getInstance().getConnection();
+        Connection conn = ConnectionManager.getInstance().getConnection();
         try {
             DiscussaoDAO dao = new DiscussaoDAO();
             dao.delete(conn, id);
@@ -110,17 +108,17 @@ public class DiscussaoService implements BaseDiscussaoService {
 
     @Override
     public Map<String, String> validate(Map<String, Object> filds) throws Exception {
-        Map<String ,String> errors= new HashMap<>();
+        Map<String, String> errors = new HashMap<>();
         String titulo = (String) filds.get("titulo");
-        if(titulo == null || titulo.trim().isEmpty() || titulo.length()>200){
+        if (titulo == null || titulo.trim().isEmpty() || titulo.length() > 200) {
             errors.put("titulo", "insira um titulo");
         }
-        
-        String pergunta= (String)filds.get("pergunta");
-        if(pergunta == null || pergunta.trim().isEmpty() || pergunta.length()>500){
+
+        String pergunta = (String) filds.get("pergunta");
+        if (pergunta == null || pergunta.trim().isEmpty() || pergunta.length() > 500) {
             errors.put("pergunta", "insira uma pergunta");
         }
         return errors;
     }
-    
+
 }

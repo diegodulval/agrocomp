@@ -1,4 +1,3 @@
-
 package com.agrocomp.model.service;
 
 import com.agrocomp.model.ConnectionManager;
@@ -10,8 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-public class MensagemService implements BaseMensagemService{
+public class MensagemService implements BaseMensagemService {
 
     @Override
     public void create(Mensagem entity) throws Exception {
@@ -47,7 +45,7 @@ public class MensagemService implements BaseMensagemService{
 
     @Override
     public List<Mensagem> readByCriteria(Map<Long, Object> criteria, Long limit, Long offset) throws Exception {
-         Connection conn = ConnectionManager.getInstance().getConnection();
+        Connection conn = ConnectionManager.getInstance().getConnection();
         List<Mensagem> mensagemList = null;
         try {
             MensagemDAO dao = new MensagemDAO();
@@ -110,13 +108,13 @@ public class MensagemService implements BaseMensagemService{
 
     @Override
     public Map<String, String> validate(Map<String, Object> filds) throws Exception {
-         Map<String ,String> errors= new HashMap<>();
-        String resposta= (String) filds.get("resposta");
-        if(resposta == null || resposta.trim().isEmpty()){
+        Map<String, String> errors = new HashMap<>();
+        String resposta = (String) filds.get("resposta");
+        if (resposta == null || resposta.trim().isEmpty()) {
             errors.put("resposta", "Insira uma resposta");
         }
-        
+
         return errors;
     }
-    
+
 }

@@ -46,7 +46,7 @@ public class CategoriaService implements BaseCategoriaService {
 
     @Override
     public Long countByCriteria(Map<Long, Object> criteria) throws Exception {
-       Connection conn = ConnectionManager.getInstance().getConnection();
+        Connection conn = ConnectionManager.getInstance().getConnection();
         Long count = 0L;
         try {
             CategoriaDAO dao = new CategoriaDAO();
@@ -116,7 +116,7 @@ public class CategoriaService implements BaseCategoriaService {
         } else {
             Map<Long, Object> criteria = new HashMap<>();
             criteria.put(CategoriaCriteria.NOME_EQ, nome);
-            List<Categoria> categoriaList= this.readByCriteria(criteria, null, null);
+            List<Categoria> categoriaList = this.readByCriteria(criteria, null, null);
             if (!categoriaList.isEmpty()) {
                 errors.put("nome", "Este valor já se encontra em uso!");
             }

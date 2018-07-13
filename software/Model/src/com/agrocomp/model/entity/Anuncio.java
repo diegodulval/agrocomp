@@ -1,20 +1,17 @@
-
 package com.agrocomp.model.entity;
 
 import com.agrocomp.model.base.BaseEntity;
 import java.math.BigDecimal;
 
-/**
- *
- * @author Alunos
- */
-public class Anuncio extends BaseEntity{
+public class Anuncio extends BaseEntity {
+
     private String nome;
     private BigDecimal preco;
     private Integer qtd;
     private String descricao;
     private byte[] foto;
     private Categoria categoria;
+    private Cliente cliente;
 
     public String getDescricao() {
         return descricao;
@@ -24,8 +21,6 @@ public class Anuncio extends BaseEntity{
         this.descricao = descricao;
     }
 
-    private Cliente cliente;
-
     public String getNome() {
         return nome;
     }
@@ -34,8 +29,6 @@ public class Anuncio extends BaseEntity{
         this.nome = nome;
     }
 
-   
-
     public Integer getQtd() {
         return qtd;
     }
@@ -43,8 +36,6 @@ public class Anuncio extends BaseEntity{
     public void setQtd(Integer qtd) {
         this.qtd = qtd;
     }
-
-  
 
     public Categoria getCategoria() {
         return categoria;
@@ -77,5 +68,5 @@ public class Anuncio extends BaseEntity{
     public void setFoto(byte[] foto) {
         this.foto = foto;
     }
-    
+
 }

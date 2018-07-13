@@ -7,7 +7,7 @@ import java.util.Map;
 //Deste modo só é possivél realizar operaçoes CRUD em Classes de Entidades
 //<E> é a classe generica que extende BaseEntity
 public interface BaseCRUDService<E extends BaseEntity> {
-    
+
     public void create(E entity) throws Exception;
 
     public E readById(Long id) throws Exception;
@@ -19,6 +19,6 @@ public interface BaseCRUDService<E extends BaseEntity> {
     public void update(E entity) throws Exception;
 
     public void delete(Long id) throws Exception;
-    
-    public Map<String,String> validate(Map<String,Object> filds) throws Exception;
+
+    public Map<String, String> validate(Map<String, Object> filds) throws Exception;
 }
