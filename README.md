@@ -14,4 +14,6 @@ Projeto interdisciplinar para obtenção de créditos nas disciplinas Engenharia
 ## Authors
 
 * **Diego Dulval** - *Initial work* - [DiegoDulval](https://github.com/diegodulval)
+* **Guilherme Dionisio
+* **Gabriel Couto
 #### 2015
